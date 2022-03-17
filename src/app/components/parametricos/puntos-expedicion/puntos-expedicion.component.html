@@ -1,0 +1,58 @@
+<div class="row">
+    <h1 class="display">Ventanillas de cobro:</h1>
+</div>
+<div>
+    <button routerLink="/" class="btn btn-sm btn-info mr-1"><i class="fas fa-arrow-left"></i> Regresar</button>
+    <button *ngIf="admin" class="btn btn-sm btn-info mr-1" (click)="open(content)">Habilitar nueva ventanilla</button>
+</div>
+
+<br>
+<!-- Tabla que lista los puntos de expedición -->
+<!-- array: horario-->
+
+<div class="row">
+    <!--  Lista las servicios -->
+    <div class="p-3" *ngFor="let p of puntos">
+        <div *ngIf="p.usuarioId.usuarioId == usuarioLogueado || admin" class="card">
+            <button class="btn btn-sm btn-light" (click)="btnClick(p.puntoExpedicionId)" ngbTooltip="Acceder">
+                    <div class="card-body">
+                       <img  src="./assets/img/caja.jpg" width="200px" height="200px">
+                        <h5 class="card-title text-center">{{p.descripcion}}</h5>
+                    </div>
+                </button>
+        </div>
+    </div>
+</div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Añadir nuevo punto</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="form">
+            <div class="form-group row">
+                <label for="inputCity" class="col-sm-2 col-form-label">Descripción</label>
+                <div class="col-sm">
+                    <input formControlName="descripcion" type="text" class="form-control" id="descripcion" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm">
+                    <label for="inputState">Cajero asignado<span class="text-danger">*</span></label>
+                    <select id="categoriaId" formControlName="usuarioId" class="form-control">
+                        <option *ngFor="let c of cajeros" [ngValue]="c.usuario">
+                            {{ c.nombres }}
+                        </option>
+                </select >
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="guardar()">Guardar</button>
+    </div>
+</ng-template>

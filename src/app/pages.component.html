@@ -1,0 +1,20 @@
+<!--<app-header></app-header>-->
+<app-navbar></app-navbar>
+<!-- 
+<div id="layoutSidenav">
+  <app-sidebar></app-sidebar>
+  <div id="layoutSidenav_content"> 
+<main>     
+-->
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#ffffff" type="ball-clip-rotate-pulse" [fullScreen]="true">
+    <p style="color: white"> Cargando... </p>
+</ngx-spinner>
+
+<div>
+    <router-outlet></router-outlet>
+</div>
+
+<!--
+<router-outlet>
+</router-outlet>
+-->

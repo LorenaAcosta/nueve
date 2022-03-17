@@ -1,0 +1,192 @@
+<ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+            <img class="w-100" [src]="images[0]" alt="Random first slide">
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+            <img class="w-100" [src]="images[1]" alt="Random second slide">
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+            <img class="w-100" [src]="images[2]" alt="Random third slide">
+        </div>
+    </ng-template>
+</ngb-carousel>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<h1 class="card-title" style="text-align: center;">¿Qué queres ver hoy?</h1><br>
+
+
+<div class="row">
+    <div class="p-3" *ngFor="let item of categorias; let i = index">
+        <div class="">
+            <div class="card">
+                <div class="card-body">
+                    <img src="{{item.imageName}}" class="card-img-top" alt="..." style="width: 200px; height: 200px;">
+                    <h5 class="card-title">{{item.descripcion}}</h5>
+                    <p class="card-text">{{item.descripcion}}</p>
+                    <blockquote class="blockquote text-center">
+                        <strong> <i class="fas fa-money-bill-alt"></i> {{ item.descripcion}}  </strong>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="assets/img/servicios.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title"> {{ this.cantservicios }} - {{ this.desservicios }}</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/img/productos.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ this.cantproductos }} - {{ this.desproductos }}</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/img/reserva.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ this.cantreservas }} - {{ this.desreservas }}</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h1 class="card-title" style="text-align: center;">Los productos más populares</h1><br>
+<div class="row">
+    <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="assets/img/servicios.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title"> {{ this.cantservicios }} - {{ this.desservicios }}</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/img/productos.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ this.cantproductos }} - {{ this.desproductos }}</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/img/reserva.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ this.cantreservas }} - {{ this.desreservas }}</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/img/servicios.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title"> {{ this.cantservicios }} - {{ this.desservicios }}</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/img/productos.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ this.cantproductos }} - {{ this.desproductos }}</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/img/reserva.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ this.cantreservas }} - {{ this.desreservas }}</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="assets/img/servicios.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title"> {{ this.cantservicios }} - {{ this.desservicios }}</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/img/productos.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ this.cantproductos }} - {{ this.desproductos }}</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/img/reserva.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ this.cantreservas }} - {{ this.desreservas }}</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/img/servicios.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title"> {{ this.cantservicios }} - {{ this.desservicios }}</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/img/productos.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ this.cantproductos }} - {{ this.desproductos }}</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/img/reserva.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ this.cantreservas }} - {{ this.desreservas }}</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<app-footer></app-footer>

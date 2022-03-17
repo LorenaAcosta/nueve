@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem auto;
+    max-width: auto;
+    box-shadow: -1px 3px 66px 0px rgba(0, 0, 0, 0.35);
+    padding: 1rem;
+}
+
+
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
